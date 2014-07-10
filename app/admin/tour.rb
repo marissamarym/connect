@@ -1,4 +1,5 @@
 ActiveAdmin.register Tour do
+  permit_params :guide_percentage, :price, :canceled, :notes, :scheduled_time, :paid, :private_notes
 
   
   # See permitted parameters documentation:
