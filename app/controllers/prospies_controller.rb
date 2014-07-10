@@ -29,6 +29,7 @@ class ProspiesController < ApplicationController
   # POST /prospies.json
   def create
     @prospy = Prospie.new(prospy_params)
+    @prospie.user = current_user
 
     respond_to do |format|
       if @prospy.save
