@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_time: 2014-07-10 00:17:09
+  end_time: 2014-07-10 00:17:09
+  type: 
+  notes: MyText
+  prospie_id: 
+  school_id: 
+
+two:
+  start_time: 2014-07-10 00:17:09
+  end_time: 2014-07-10 00:17:09
+  type: 
+  notes: MyText
+  prospie_id: 
+  school_id: 
