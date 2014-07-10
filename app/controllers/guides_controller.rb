@@ -29,6 +29,7 @@ class GuidesController < ApplicationController
   # POST /guides.json
   def create
     @guide = Guide.new(guide_params)
+    @guide.user = current_user
 
     respond_to do |format|
       if @guide.save
