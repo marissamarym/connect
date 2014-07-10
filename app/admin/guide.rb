@@ -1,4 +1,5 @@
 ActiveAdmin.register Guide do
+  permit_params :major, :interests, :hometown, :blurb, :year, :payment_id, :payment_details
 
   
   # See permitted parameters documentation:
