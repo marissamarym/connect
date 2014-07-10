@@ -1,19 +1,24 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = TourRequest -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => TourRequest %></h1>
+</div>
 
-<p>
-  <strong>Guide:</strong>
-  <%= @tour_request.guide %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:type) %></dt>
+      <dd><pre class="prettyprint"><%= @tour_request.type %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Type:</strong>
-  <%= @tour_request.type %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              tour_requests_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_tour_request_path(@tour_request), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              tour_request_path(@tour_request),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Visit:</strong>
-  <%= @tour_request.visit %>
-</p>
-
-<%= link_to 'Edit', edit_tour_request_path(@tour_request) %> |
-<%= link_to 'Back', tour_requests_path %>
