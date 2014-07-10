@@ -1,4 +1,5 @@
 ActiveAdmin.register Rating do
+  permit_params :score
 
   
   # See permitted parameters documentation:
