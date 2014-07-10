@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :prospies
+
   resources :tours
 
   resources :tour_requests
