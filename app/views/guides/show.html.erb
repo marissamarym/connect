@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @guide.user %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @guide.school %>
+</p>
+
+<p>
+  <strong>Major:</strong>
+  <%= @guide.major %>
+</p>
+
+<p>
+  <strong>Interests:</strong>
+  <%= @guide.interests %>
+</p>
+
+<p>
+  <strong>Hometown:</strong>
+  <%= @guide.hometown %>
+</p>
+
+<p>
+  <strong>Blurb:</strong>
+  <%= @guide.blurb %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @guide.year %>
+</p>
+
+<p>
+  <strong>Payment:</strong>
+  <%= @guide.payment_id %>
+</p>
+
+<p>
+  <strong>Payment details:</strong>
+  <%= @guide.payment_details %>
+</p>
+
+<%= link_to 'Edit', edit_guide_path(@guide) %> |
+<%= link_to 'Back', guides_path %>

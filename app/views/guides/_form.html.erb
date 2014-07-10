@@ -1,0 +1,19 @@
+<%= simple_form_for(@guide) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :user %>
+    <%= f.association :school %>
+    <%= f.input :major %>
+    <%= f.input :interests %>
+    <%= f.input :hometown %>
+    <%= f.input :blurb %>
+    <%= f.input :year %>
+    <%= f.input :payment_id %>
+    <%= f.input :payment_details %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
