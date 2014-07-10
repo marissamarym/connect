@@ -1,4 +1,5 @@
 ActiveAdmin.register School do
+  permit_params :email, :phone, :website, :details_url
 
   
   # See permitted parameters documentation:
