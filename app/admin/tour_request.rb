@@ -1,4 +1,5 @@
 ActiveAdmin.register TourRequest do
+  permit_params :type
 
   
   # See permitted parameters documentation:
