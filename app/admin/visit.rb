@@ -1,4 +1,5 @@
 ActiveAdmin.register Visit do
+  permit_params :start_time, :end_time, :type, :notes
 
   
   # See permitted parameters documentation:
