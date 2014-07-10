@@ -1,44 +1,36 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Tour -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Tour %></h1>
+</div>
 
-<p>
-  <strong>Tour request:</strong>
-  <%= @tour.tour_request %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:guide_percentage) %></dt>
+      <dd><pre class="prettyprint"><%= @tour.guide_percentage %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:price) %></dt>
+      <dd><pre class="prettyprint"><%= @tour.price %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:canceled) %></dt>
+      <dd><pre class="prettyprint"><%= @tour.canceled %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:notes) %></dt>
+      <dd><pre class="prettyprint"><%= @tour.notes %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:scheduled_time) %></dt>
+      <dd><pre class="prettyprint"><%= @tour.scheduled_time %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:paid) %></dt>
+      <dd><pre class="prettyprint"><%= @tour.paid %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:private_notes) %></dt>
+      <dd><pre class="prettyprint"><%= @tour.private_notes %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Guide percentage:</strong>
-  <%= @tour.guide_percentage %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              tours_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_tour_path(@tour), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              tour_path(@tour),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @tour.price %>
-</p>
-
-<p>
-  <strong>Canceled:</strong>
-  <%= @tour.canceled %>
-</p>
-
-<p>
-  <strong>Notes:</strong>
-  <%= @tour.notes %>
-</p>
-
-<p>
-  <strong>Scheduled time:</strong>
-  <%= @tour.scheduled_time %>
-</p>
-
-<p>
-  <strong>Paid:</strong>
-  <%= @tour.paid %>
-</p>
-
-<p>
-  <strong>Private notes:</strong>
-  <%= @tour.private_notes %>
-</p>
-
-<%= link_to 'Edit', edit_tour_path(@tour) %> |
-<%= link_to 'Back', tours_path %>
