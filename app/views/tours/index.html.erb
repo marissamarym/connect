@@ -1,0 +1,39 @@
+<h1>Listing tours</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tour request</th>
+      <th>Guide percentage</th>
+      <th>Price</th>
+      <th>Canceled</th>
+      <th>Notes</th>
+      <th>Scheduled time</th>
+      <th>Paid</th>
+      <th>Private notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tours.each do |tour| %>
+      <tr>
+        <td><%= tour.tour_request %></td>
+        <td><%= tour.guide_percentage %></td>
+        <td><%= tour.price %></td>
+        <td><%= tour.canceled %></td>
+        <td><%= tour.notes %></td>
+        <td><%= tour.scheduled_time %></td>
+        <td><%= tour.paid %></td>
+        <td><%= tour.private_notes %></td>
+        <td><%= link_to 'Show', tour %></td>
+        <td><%= link_to 'Edit', edit_tour_path(tour) %></td>
+        <td><%= link_to 'Destroy', tour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tour', new_tour_path %>

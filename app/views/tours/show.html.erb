@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tour request:</strong>
+  <%= @tour.tour_request %>
+</p>
+
+<p>
+  <strong>Guide percentage:</strong>
+  <%= @tour.guide_percentage %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @tour.price %>
+</p>
+
+<p>
+  <strong>Canceled:</strong>
+  <%= @tour.canceled %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @tour.notes %>
+</p>
+
+<p>
+  <strong>Scheduled time:</strong>
+  <%= @tour.scheduled_time %>
+</p>
+
+<p>
+  <strong>Paid:</strong>
+  <%= @tour.paid %>
+</p>
+
+<p>
+  <strong>Private notes:</strong>
+  <%= @tour.private_notes %>
+</p>
+
+<%= link_to 'Edit', edit_tour_path(@tour) %> |
+<%= link_to 'Back', tours_path %>

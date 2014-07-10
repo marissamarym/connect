@@ -1,0 +1,18 @@
+<%= simple_form_for(@tour) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :tour_request %>
+    <%= f.input :guide_percentage %>
+    <%= f.input :price %>
+    <%= f.input :canceled %>
+    <%= f.input :notes %>
+    <%= f.input :scheduled_time %>
+    <%= f.input :paid %>
+    <%= f.input :private_notes %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
