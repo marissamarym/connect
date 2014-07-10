@@ -1,4 +1,5 @@
 ActiveAdmin.register Prospie do
+  permit_params 
 
   
   # See permitted parameters documentation:
