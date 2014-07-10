@@ -1,19 +1,52 @@
-<%= simple_form_for(@guide) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.association :user %>
-    <%= f.association :school %>
-    <%= f.input :major %>
-    <%= f.input :interests %>
-    <%= f.input :hometown %>
-    <%= f.input :blurb %>
-    <%= f.input :year %>
-    <%= f.input :payment_id %>
-    <%= f.input :payment_details %>
+<%= form_for @guide, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :major, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :major, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :interests, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :interests, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :hometown, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :hometown, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :blurb, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :blurb, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :year, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :year, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :payment_id, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :payment_id, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :payment_details, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :payment_details, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  guides_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
