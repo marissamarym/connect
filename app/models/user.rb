@@ -21,4 +21,5 @@ class User < ActiveRecord::Base
   end
 
 
+  validates_formatting_of :email, using: :email
 end
