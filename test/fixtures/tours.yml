@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tour_request_id: 
+  guide_percentage: 9.99
+  price: 9.99
+  canceled: false
+  notes: MyText
+  scheduled_time: 2014-07-10 00:17:23
+  paid: false
+  private_notes: MyText
+
+two:
+  tour_request_id: 
+  guide_percentage: 9.99
+  price: 9.99
+  canceled: false
+  notes: MyText
+  scheduled_time: 2014-07-10 00:17:23
+  paid: false
+  private_notes: MyText
