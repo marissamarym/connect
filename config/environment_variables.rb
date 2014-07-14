@@ -1,0 +1,4 @@
+development:
+FACEBOOK_SECRET_ID: c71fb2337328a410988907bcbcffeec1
+production:
+FACEBOOK_SECRET_ID: c71fb2337328a410988907bcbcffeec1
