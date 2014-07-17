@@ -3,10 +3,10 @@ class ProspiesController < ApplicationController
   #->Prelang (scaffolding:rails/scope_to_user)
   before_filter :require_user_signed_in, only: [:new, :edit, :create, :update, :destroy]
 
-  before_action :set_prospy, only: [:show, :edit, :update, :destroy]
+  before_action :set_prospie, only: [:show, :edit, :update, :destroy]
 
 
-    def intro
+  def intro
   end
 
   # GET /prospies
@@ -22,7 +22,7 @@ class ProspiesController < ApplicationController
 
   # GET /prospies/new
   def new
-    @prospy = Prospie.new
+    @prospie = Prospie.new
   end
 
   # GET /prospies/1/edit
@@ -32,16 +32,16 @@ class ProspiesController < ApplicationController
   # POST /prospies
   # POST /prospies.json
   def create
-    @prospy = Prospie.new(prospy_params)
+    @prospie = Prospie.new (prospie_params)
     @prospie.user = current_user
 
     respond_to do |format|
-      if @prospy.save
-        format.html { redirect_to @prospy, notice: 'Prospie was successfully created.' }
-        format.json { render :show, status: :created, location: @prospy }
+      if @prospie.save
+        format.html { redirect_to @prospie, notice: 'Prospie was successfully created.' }
+        format.json { render :show, status: :created, location: @prospie }
       else
         format.html { render :new }
-        format.json { render json: @prospy.errors, status: :unprocessable_entity }
+        format.json { render json: @prospie.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -50,12 +50,12 @@ class ProspiesController < ApplicationController
   # PATCH/PUT /prospies/1.json
   def update
     respond_to do |format|
-      if @prospy.update(prospy_params)
-        format.html { redirect_to @prospy, notice: 'Prospie was successfully updated.' }
-        format.json { render :show, status: :ok, location: @prospy }
+      if @prospie.update(prospie_params)
+        format.html { redirect_to @prospie, notice: 'Prospie was successfully updated.' }
+        format.json { render :show, status: :ok, location: @prospie }
       else
         format.html { render :edit }
-        format.json { render json: @prospy.errors, status: :unprocessable_entity }
+        format.json { render json: @prospie.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -63,7 +63,7 @@ class ProspiesController < ApplicationController
   # DELETE /prospies/1
   # DELETE /prospies/1.json
   def destroy
-    @prospy.destroy
+    @prospie.destroy
     respond_to do |format|
       format.html { redirect_to prospies_url, notice: 'Prospie was successfully destroyed.' }
       format.json { head :no_content }
@@ -72,12 +72,12 @@ class ProspiesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_prospy
-      @prospy = Prospie.find(params[:id])
+    def set_prospie
+      @prospie = Prospie.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def prospy_params
-      params.require(:prospy).permit(:user_id)
+    def prospie_params
+      #params.require(:prospy).permit(:user_id)
     end
 end
