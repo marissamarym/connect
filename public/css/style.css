@@ -84,7 +84,7 @@ hr {
     padding-bottom: 110px;
 	display:block;
     position:relative;
-    z-index:120;
+    z-index:100;
 }
 
 
@@ -450,7 +450,7 @@ input.gn-search:focus {
 
 .intro {
 	width:100%;
-	position:relative;
+	position:relative;\
 }
 
 #intro{	
@@ -459,7 +459,7 @@ input.gn-search:focus {
 }
 
 .intro .slogan {
-	padding:250px 0 60px;
+	padding:170px 0 60px;
 	text-align: center;
 	
 }
@@ -468,14 +468,14 @@ input.gn-search:focus {
 	line-height: 1.1em;
 	margin-bottom: 20px;
 	 font-size: 40px;
-	 text-shadow: 2px 2px 2px #222;
+	 text-shadow: 2px 4px 2px #222;
 	margin-top: 250px;
 }
 .intro .slogan p {
 	color: #eee;
 	margin-bottom: 50px;
 	font-size: 20px;
-	text-shadow: 2px 2px 2px #222;
+	text-shadow: 2px 3px 2px #222;
 }
 
 
