@@ -26,3 +26,10 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+Facebook configuration:
+Leave App Domains blank
+Add Website.
+Site URL: http://localhost:3000/
+Mobile URL: http://localhost:3000/
+Go to http://localhost:3000/ to test, http://0.0.0.0:3000/ won't work for whatever reason

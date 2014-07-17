@@ -5,6 +5,10 @@ class ProspiesController < ApplicationController
 
   before_action :set_prospy, only: [:show, :edit, :update, :destroy]
 
+
+    def intro
+  end
+
   # GET /prospies
   # GET /prospies.json
   def index
