@@ -41,10 +41,11 @@
     <ul class="nav navbar-nav">
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="/guides"><i class="fa fa-group"> Tour Guides</i></a></li>
-      <li><a href="/tour_requests"><i class="fa fa-calendar"> My Tours</i></a></li>
       <% if defined?(Devise) %>
         <% if user_signed_in? %>
+ 
+      <li><a href="/guides"><i class="fa fa-group"> Browse Tour Guides</i></a></li>
+      <li><a href="/tour_requests"><i class="fa fa-calendar"> My Tours</i></a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"> My Account <b class="caret"></b></a>
             <ul class="dropdown-menu">
