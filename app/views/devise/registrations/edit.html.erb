@@ -5,7 +5,7 @@
   <br><br>
   <div class="col-md-5 col-md-offset-1 col-sm-5">
     <div class="well well-lg">
-<h2>Edit Your Profile <hr></h2>
+<h2 style="text-align:center;"><img class="img-cropped" src="http://graph.facebook.com/<%= current_user.uid %>/picture?type=large" height="25%" width="25%"/><br><br>Edit Your Profile <hr></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
@@ -29,3 +29,23 @@
 </div>
 </div>
 </div>
+
+<style>
+div .divcrop{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 10px;
+    position: relative;
+}
+.crop {
+    position: absolute;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto; 
+    height: auto;
+    width: auto;
+}
+</style>
