@@ -2,13 +2,13 @@
 
 
 <div class="page-header" style="text-align:center;">
-  <h1>Choose a guide <i class="fa fa-group" style="color:#222;"></i></h1>
+  <h1 class="helv">Choose a guide <i class="fa fa-group" style="color:#222;"></i></h1>
 </div>
   <% @guides.each_slice(4) do |slice| %>   
   <row>
       <% slice.each do |guide| %>
 <div height="200px" class="col-md-3" style="padding-top:20px; padding-bottom:20px;">
-  <div class="block-update-card status" style="margin-bottom:20px;">
+  <div class="block-update-card status" style="margin-bottom:10px;">
     <div class="update-card-body">
       <div class="update-card-body">
         <div class="row">
@@ -90,9 +90,11 @@
   </tbody>
 </table>
 -->
+<row>
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_guide_path,
             :class => 'btn btn-primary' %>
+          </row>
 
 
 
