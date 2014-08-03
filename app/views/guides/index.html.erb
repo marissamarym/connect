@@ -7,25 +7,27 @@
   <% @guides.each_slice(4) do |slice| %>   
   <row>
       <% slice.each do |guide| %>
-<div height="200px" class="col-md-3">
-  <div class="block-update-card status">
+<div height="200px" class="col-md-3" style="padding-top:20px; padding-bottom:20px;">
+  <div class="block-update-card status" style="margin-bottom:20px;">
     <div class="update-card-body">
       <div class="update-card-body">
         <div class="row">
           <div class="col-md-4">
-            <br>
-            <img class="img-circle" src="http://graph.facebook.com/<%= current_user.uid %>/picture?type=large" height="40px" width="70px"/>
+            <img class="img-rounded" src="http://graph.facebook.com/<%= current_user.uid %>/picture?type=large" height="40px" width="70px"/>
           </div>
           <div class="col-md-8">
           <h4>MARISSA MONTGOMERY</h4>
-          <p><%= guide.blurb %></p>
           </div>
-        </div>
+          </div>
+          <div class="scroll"><%= guide.blurb %></div>
+
         <hr width="80%">
+        <div class="scrollCard">
                   <p><b><%= model_class.human_attribute_name(:major) %></b> <%= guide.major %></p>
           <p><b><%= model_class.human_attribute_name(:interests) %></b> <%= guide.interests %></p>
           <p><b><%= model_class.human_attribute_name(:hometown) %></b> <%= guide.hometown %></p>
           <p><b><%= model_class.human_attribute_name(:year) %></b> <%= guide.year %></p>
+        </div>
       </div>
     </div>
 
@@ -33,22 +35,9 @@
           SELECT THIS GUIDE
         </p>
 </div>
-
 </div>
 
-<!--
-      <div class="col-md-3">
-        <div class="well well-lg">
-          <p style="text-align:center;"><img class="img-circle" src="http://graph.facebook.com/<%= current_user.uid %>/picture?type=large" height="50%" width="50%"/></p>
-          <p><b><%= model_class.human_attribute_name(:major) %></b> <%= guide.major %></p>
-          <p><b><%= model_class.human_attribute_name(:interests) %></b> <%= guide.interests %></p>
-          <p><b><%= model_class.human_attribute_name(:hometown) %></b> <%= guide.hometown %></p>
-          <p><b><%= model_class.human_attribute_name(:blurb) %></b> <%= guide.blurb %></p>
-          <p><b><%= model_class.human_attribute_name(:year) %></b> <%= guide.year %></p>
-          <hr>
-          <p><a class="btn btn-primary center-block">Select</a></p>
-      </div>
-      </div>-->
+
       <% end %>
   </row>
   <% end %>
@@ -105,4 +94,21 @@
             new_guide_path,
             :class => 'btn btn-primary' %>
 
+
+
+    <style>
+    div.scroll
+{
+width:240px;
+height:40px;
+overflow:scroll;
+font-size:12px;
+}
+    div.scrollCard
+{
+height:117px;
+overflow:scroll;
+font-size:12px;
+}
+    </style>
 

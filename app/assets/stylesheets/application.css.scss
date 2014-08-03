@@ -21,6 +21,16 @@
 
 //->Prelang (ui_framework:twitter_bootstrap)
 
+.thumbnail {
+    position: relative;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
 .block-update-card {
   height: 100%;
   border: 1px #FFFFFF solid;
@@ -82,7 +92,7 @@
   margin: 0px;
 }
 .block-update-card .card-bottom-status:hover {
-  background-color: #dd4b39;
+  background-color: #eb5d1e;
   color: #FFFFFF;
   cursor: pointer;
 }
